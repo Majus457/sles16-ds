@@ -41,7 +41,7 @@ Typical use cases include:
 
 ---
 
-## 4. Two-Person Integrity (Baseline)
+## 4. Two-Person Integrity (Baseline, **in its most simple form**)
 
 ### 4.1 Script Location
 
@@ -124,7 +124,7 @@ These limitations are addressed by the N-Person model.
 
 ---
 
-## 6. N-Person (Quorum-Based) Integrity
+## 6. N-Person (Quorum-Based) Integrity (More advanced version)
 
 ### 6.1 Concept
 
@@ -397,8 +397,3 @@ This enhanced TPI framework provides:
 - Clear auditor-ready threat boundaries
 
 It is a **practical, transparent control** for SLES systems where simplicity and trust boundaries matter.
-
----
-
-**End of Document**
-
