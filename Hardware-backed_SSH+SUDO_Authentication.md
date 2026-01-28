@@ -1,4 +1,4 @@
-# 🔐 Proof of Concept (PoC)
+# Proof of Concept (PoC)
 ## End-to-End Hardware-Backed SSH + sudo Authentication on SLES 16
 
 **Author:** Joseph Oaks  
@@ -18,7 +18,7 @@ All administrative actions require two hardware-enforced factors:
 
 Both SSH login and `sudo` authorization are verified through **cryptographic signing by the same hardware token**, but the token never leaves the user’s workstation.
 
-### 🔄 Mechanics
+### Mechanics
 | Phase | Component | Where it Executes | Module / Tool |
 |:------|:-----------|:-----------------|:--------------|
 | SSH login | Smartcard key signing | Local workstation | `openssh` + PKCS #11 (`opensc`, `libykcs11`) |
@@ -197,17 +197,3 @@ sudo ausearch -k agent-auth
 | Token never on remote host | ✅ |
 | No password fallback | ✅ |
 | Auditable chain of trust | ✅ |
-
----
-
-## 14  References
-- **OpenSSH Agent Forwarding:** <https://man.openbsd.org/ssh-agent>  
-- **pam_ssh_agent_auth:** <https://github.com/jbeverly/pam_ssh_agent_auth>  
-- **OpenSC Project:** <https://github.com/OpenSC/OpenSC>  
-- **SUSE PAM Guide:** <https://documentation.suse.com/sles/16/html/SLES-all/cha-pam.html>  
-
----
-
-> **Result:**  
-> Remote SLES 16 systems now enforce **hardware-backed sudo authorization** using your local YubiKey / CAC / RSA smartcard, guaranteeing cryptographic non-repudiation and eliminating passwords from the administrative path.
-
