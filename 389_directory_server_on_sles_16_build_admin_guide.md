@@ -288,9 +288,10 @@ systemctl enable --now cockpit.socket
 Verify:
 
 ```bash
-cockpit --version
+cockpit-bridge --version
 ```
 
+**Note:** This has a known quirk and will display as Version: None.
 ---
 
 ### 12.2 Retrieve 389-ds Source (Cockpit UI)
