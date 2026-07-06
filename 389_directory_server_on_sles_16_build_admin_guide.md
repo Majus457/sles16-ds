@@ -198,7 +198,7 @@ ldapadd -H ldap://127.0.0.1 -x \
 ### 9.1 Generate Password Hash
 
 ```bash
-slappasswd -s <PASSWORD>
+pwdhash -s <PASSWORD>
 ```
 
 ### 9.2 Admin User LDIF
@@ -210,9 +210,9 @@ uid: admin
 cn: Admin User
 sn: User
 mail: admin@example.com
-userPassword: <SSHA_HASH>
+userPassword: <SSHA512_HASH>
 ```
-
+ 
 ```bash
 ldapadd -H ldap://127.0.0.1 -x \
   -D "cn=Directory Manager" -W \
