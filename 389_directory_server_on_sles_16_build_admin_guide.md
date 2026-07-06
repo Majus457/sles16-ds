@@ -70,7 +70,7 @@ zypper refresh
 ```bash
 zypper install -y \
   cockpit \
-  389-ds-base \
+  389-ds \
   selinux-policy \
   selinux-tools \
   auditd
