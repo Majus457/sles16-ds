@@ -73,7 +73,7 @@ zypper install -y \
   389-ds \
   selinux-policy \
   selinux-tools \
-  auditd
+  audit
 ```
 
 Optional diagnostics:
