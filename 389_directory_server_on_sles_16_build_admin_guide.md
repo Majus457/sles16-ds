@@ -85,7 +85,7 @@ zypper install -y pamtester
 Verify:
 
 ```bash
-rpm -q 389-ds-base selinux-policy selinux-tools
+rpm -q 389-ds selinux-policy selinux-tools
 ```
 
 ---
